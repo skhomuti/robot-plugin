@@ -192,7 +192,8 @@ public class RobotSuiteResult extends RobotTestObject {
 
 	@Override
 	public long getDuration() {
-		if (StringUtils.isEmpty(this.startTime) || StringUtils.isEmpty(this.endTime))
+		if (StringUtils.isEmpty(this.startTime) || "N/A".equals(this.startTime)
+				|| StringUtils.isEmpty(this.endTime) || "N/A".equals(this.startTime))
 				return duration;
 
 		try{
